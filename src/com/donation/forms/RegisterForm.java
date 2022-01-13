@@ -126,6 +126,11 @@ public class RegisterForm extends javax.swing.JFrame {
 
         txtFname.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
         txtFname.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(0, 0, 0)));
+        txtFname.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtFnameActionPerformed(evt);
+            }
+        });
         txtFname.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtFnameKeyTyped(evt);
@@ -134,6 +139,11 @@ public class RegisterForm extends javax.swing.JFrame {
 
         txtLname.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
         txtLname.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(0, 0, 0)));
+        txtLname.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtLnameActionPerformed(evt);
+            }
+        });
         txtLname.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtLnameKeyTyped(evt);
@@ -404,6 +414,14 @@ public class RegisterForm extends javax.swing.JFrame {
         new LoginForm().setVisible(true);
        dispose();
     }//GEN-LAST:event_jLabel10MouseClicked
+
+    private void txtFnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFnameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtFnameActionPerformed
+
+    private void txtLnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLnameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtLnameActionPerformed
 
     /**
      * @param args the command line arguments

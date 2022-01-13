@@ -2,18 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/Users/karnp/Documents/NetBeansProjects/DonationManagement/src/com/donation/classes/Rules.java</file>
-            <file>file:/C:/Users/karnp/Documents/NetBeansProjects/DonationManagement/src/com/donation/forms/DonationCategory.java</file>
-            <file>file:/C:/Users/karnp/Documents/NetBeansProjects/DonationManagement/src/com/donation/classes/sendMail1.java</file>
-            <file>file:/C:/Users/karnp/Documents/NetBeansProjects/DonationManagement/src/com/donation/forms/RegisterForm.java</file>
-            <file>file:/C:/Users/karnp/Documents/NetBeansProjects/DonationManagement/src/com/donation/forms/DonerForm.java</file>
-            <file>file:/C:/Users/karnp/Documents/NetBeansProjects/DonationManagement/src/com/donation/forms/MakeDonation.java</file>
-            <file>file:/C:/Users/karnp/Documents/NetBeansProjects/DonationManagement/src/com/donation/classes/DBClass.java</file>
-            <file>file:/C:/Users/karnp/Documents/NetBeansProjects/DonationManagement/src/com/donation/forms/SplashScreen.java</file>
-            <file>file:/C:/Users/karnp/Documents/NetBeansProjects/DonationManagement/src/com/donation/forms/AdminForm.java</file>
-            <file>file:/C:/Users/karnp/Documents/NetBeansProjects/DonationManagement/src/com/donation/forms/sendemail.java</file>
-            <file>file:/C:/Users/karnp/Documents/NetBeansProjects/DonationManagement/src/com/donation/forms/LoginForm.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

@@ -41,7 +41,7 @@ public class SplashScreen extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(7, 26, 82));
 
         jLabel1.setFont(new java.awt.Font("Comic Sans MS", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(249, 7, 22));
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Donation Management System");
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/give-love.png"))); // NOI18N
@@ -98,7 +98,7 @@ public class SplashScreen extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Windows".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }

@@ -15,11 +15,8 @@ public class StatusClass {
     public static String pass;
     public static String id;
     public static String name;
-    public static String rand;
-    public static int age;
-    public static String rnd;
-    public static String centername;
-    public static String distname;
-    public static String date;
-    public static String vaccinename;
+    public static String n;
+    public static String m;
+    
+    
 }

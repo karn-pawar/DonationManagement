@@ -4,15 +4,18 @@
  */
 package com.donation.forms;
 
+import com.donation.classes.DBClass;
 import com.donation.classes.Messages;
 import com.donation.classes.Rules;
+import com.donation.classes.StatusClass;
+import javax.mail.Message;
 
 /**
  *
  * @author karnp
  */
 public class Updateprofile extends javax.swing.JFrame {
-
+    DBClass db = new DBClass();
     /**
      * Creates new form Updateprofile
      */
@@ -35,12 +38,10 @@ public class Updateprofile extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         txtFname = new javax.swing.JTextField();
         txtLname = new javax.swing.JTextField();
-        txtEmail = new javax.swing.JTextField();
         txtMobile = new javax.swing.JTextField();
         txtAddress = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
@@ -88,10 +89,6 @@ public class Updateprofile extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(34, 40, 49));
         jLabel3.setText("Last Name");
 
-        jLabel4.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(34, 40, 49));
-        jLabel4.setText("Email address");
-
         jLabel5.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(34, 40, 49));
         jLabel5.setText("Mobile number");
@@ -113,14 +110,6 @@ public class Updateprofile extends javax.swing.JFrame {
         txtLname.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtLnameKeyTyped(evt);
-            }
-        });
-
-        txtEmail.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
-        txtEmail.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(0, 0, 0)));
-        txtEmail.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                txtEmailKeyTyped(evt);
             }
         });
 
@@ -163,10 +152,6 @@ public class Updateprofile extends javax.swing.JFrame {
                 .addGap(136, 136, 136)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel4)
-                        .addGap(18, 18, 18)
-                        .addComponent(txtEmail))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2)
                             .addComponent(jLabel3))
@@ -181,13 +166,12 @@ public class Updateprofile extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(txtMobile)
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addGap(18, 18, 18)
-                                    .addComponent(jButton2)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(imgpath, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
+                            .addComponent(txtMobile)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(94, 94, 94)
+                        .addComponent(jButton2)
+                        .addGap(53, 53, 53)
+                        .addComponent(imgpath, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap(135, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -202,11 +186,7 @@ public class Updateprofile extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(txtLname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(47, 47, 47)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(48, 48, 48)
+                .addGap(73, 73, 73)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(txtMobile, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -214,11 +194,11 @@ public class Updateprofile extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel8)
                     .addComponent(txtAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(75, 75, 75)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(60, 60, 60)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(imgpath)
                     .addComponent(jButton2))
-                .addContainerGap(33, Short.MAX_VALUE))
+                .addContainerGap(45, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -249,11 +229,6 @@ public class Updateprofile extends javax.swing.JFrame {
         Rules.isValid(txtLname, Rules.isChar(lname));
     }//GEN-LAST:event_txtLnameKeyTyped
 
-    private void txtEmailKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtEmailKeyTyped
-        String email = txtEmail.getText(); 
-        Rules.isValid(txtEmail, Rules.isEmail(email));
-    }//GEN-LAST:event_txtEmailKeyTyped
-
     private void txtMobileKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtMobileKeyTyped
         String mobile = txtMobile.getText();
         Rules.isValid(txtMobile, Rules.isMobile(mobile));
@@ -267,34 +242,28 @@ public class Updateprofile extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         String fname = txtFname.getText();
         String lname = txtLname.getText();
-        String email = txtEmail.getText();
+//        String email = txtEmail.getText();
         String mobile = txtMobile.getText();
-        String pass = txtPass.getText();
+//        String pass = txtPass.getText();
         int id = 0;
         String address = txtAddress.getText();
         if (fname.isEmpty()) {
             Messages.showError("Please enter First name", "Empty");
         } else if (lname.isEmpty()) {
             Messages.showError("Please enter Last name", "Empty");
-        } else if (email.isEmpty()) {
-            Messages.showError("Please enter Email", "Empty");
-        } else if (mobile.isEmpty()) {
+        }else if (mobile.isEmpty()) {
             Messages.showError("Please enter Mobile number", "Empty");
-        } else if (pass.isEmpty()) {
-            Messages.showError("Please enter  Password", "Empty");
         } else if (address.isEmpty()) {
             Messages.showError("Please enter Address", "Empty");
         } else if (!Rules.isChar(fname)) {
             Messages.showError("First name format is invalid", "Invalid format");
         } else if (!Rules.isChar(lname)) {
             Messages.showError("Last name format is invalid", "Invalid format");
-        } else if (!Rules.isEmail(email)) {
-            Messages.showError("Email format is invalid", "Invalid format");
         } else if (!Rules.isMobile(mobile)) {
             Messages.showError("Mobile no format is invalid", "Invalid format");
         }else {
-            db.execute("insert into register_tbl values(?,?,?,?,?,?,?)", id,fname,lname,email,mobile,address,f);
-            Messages.showInfo("Registrastion Successfull", "Success");
+            db.execute("update register_tbl set fname=?,lname=?,mobile=?,address=? where email=? and password=?",fname,lname,mobile,address,StatusClass.user,StatusClass.pass);
+            Messages.showInfo("UpdateProfile Successfull","Successs");
         }
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -340,13 +309,11 @@ public class Updateprofile extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JTextField txtAddress;
-    private javax.swing.JTextField txtEmail;
     private javax.swing.JTextField txtFname;
     private javax.swing.JTextField txtLname;
     private javax.swing.JTextField txtMobile;
